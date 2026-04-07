@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PlaylistDemo {
+public class PlaylistDemo
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Playlist playlist = new Playlist();
         playlist.add(new PlaylistItem("Intro", 1));
         playlist.add(new PlaylistItem("Demo", 2));
@@ -14,13 +16,16 @@ public class PlaylistDemo {
 
         System.out.println("Default order: " + titles(playlist.iterator()));
         System.out.println("Priority order: " + titles(playlist.priorityIterator()));
+        System.out.println("Reverse order: " + titles(playlist.reverseIterator()));
 
-        // TODO: Add a brief reflection in your submission about when built-in iteration would be enough.
+        System.out.println("Reflection: Built-in iteration would be enough if the playlist only needed one simple traversal order. A custom Iterable adds value when the same data needs multiple meaningful traversal strategies, such as insertion order, priority order, and reverse order.");
     }
 
-    static List<String> titles(Iterator<PlaylistItem> iterator) {
+    static List<String> titles(Iterator<PlaylistItem> iterator) 
+    {
         List<String> titles = new ArrayList<>();
-        while (iterator.hasNext()) {
+        while (iterator.hasNext()) 
+        {
             titles.add(iterator.next().getTitle());
         }
         return titles;

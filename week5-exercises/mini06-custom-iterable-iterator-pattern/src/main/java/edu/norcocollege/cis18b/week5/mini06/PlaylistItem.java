@@ -1,20 +1,38 @@
 package edu.norcocollege.cis18b.week5.mini06;
 
-public class PlaylistItem {
+/**
+ * Represents a single item in a playlist.
+ * Each item has a title and a priority value,
+ * which is used for alternate traversal strategies.
+ */
+public class PlaylistItem 
+{
 
-	private final String title;
-	private final int priority;
+    private final String title;
+    private final int priority;
 
-	public PlaylistItem(String title, int priority) {
-		this.title = title;
-		this.priority = priority;
-	}
+    /*
+     * Constructs a PlaylistItem with a title and priority
+	*/
+    public PlaylistItem(String title, int priority) 
+	{
+        this.title = title;
+        this.priority = priority;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    /*
+     * Returns the title of the playlist item.
+    */
+    public String getTitle() 
+	{
+        return title;
+    }
 
-	public int getPriority() {
-		return priority;
-	}
+    /*
+     * Returns the priority of the playlist item
+    */
+    public int getPriority() 
+	{
+        return priority;
+    }
 }
